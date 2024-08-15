@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Unity in Freedom: Wishing You a Joyous Independence Day!"</title>
+    <link rel="shortcut icon" href="India-icon (1).png">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <style>
+        body{
+            background: linear-gradient(135deg, rgb(242, 198, 116), #fbfafa, #8af692);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Times New Roman;
+        }
+        .wishes{
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0;
+            width: 100%; 
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            justify-content: center; 
+            align-items: center; 
+        }
+        .content{
+            background-color: white;
+            padding: 20px; 
+            border-radius: 10px; 
+            text-align: center;
+        }
+        .search{
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0;
+            width: 60%; 
+            height: 50%;
+            justify-content: center; 
+            align-items: center; 
+            margin-left: 350px;
+            margin-top: 200px;
+            
+        }
+        .search-content{
+            background-color: white;
+            padding: 100px; 
+            border-radius: 10px; 
+            text-align: center;
+            border: 5px solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(to right, rgb(246, 163, 8), rgba(255, 255, 255, 0.904), rgb(1, 83, 1));
+        }
+        .btn-close {
+            position: absolute;
+            top: 10px; 
+            right: 10px; 
+        }
+    </style>
+    <script>
+        function clickhere(){
+            document.getElementById("form").style.display="block";
+            document.getElementById("form").style.display = "flex";
+        }
+        function submit(){
+            document.getElementById("overlay").style.display="block";
+            document.getElementById("overlay").style.display = "flex";
+            document.getElementById("name").innerHTML=document.getElementById("Name").value;
+            var audio = document.getElementById("anthem");
+            audio.play();
+        }
+        function hideCard(){
+            document.getElementById("overlay").style.display = "none";
+        }
+        function hideform(){
+            document.getElementById("form").style.display = 'none';
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <div>
+        <div class="card" style="width: 280px; border: 2px solid grey; box-shadow:0 0 5px black; border-radius: 2px;">
+            <img src="india image.jpg" alt="image not found">
+            <div class="card-body">
+                <h5>Happy Independence Day to All in India!</h5><br><br>
+                <button class="btn btn-primary w-100" onclick="clickhere()">Click Here</button>
+            </div>
+        </div>
+        <div class="search" style="display: none;" id="form">
+            <div class="search-content input-group">
+                <button class="btn btn-primary"><span class="bi bi-person-fill"></span></button>
+                <input type="text" class="form-control" id="Name" placeholder="Welcome back! Could you please enter your name to continue?">
+                <button class="btn btn-warning" onclick="submit()">Submit</button>
+                <button class="btn-close" onclick="hideform()"></button>
+            </div>
+        </div>
+        <div class="wishes" style="display: none;" id="overlay">
+            <div class="content">
+                <p>Let's rejoice in the freedom we cherish and honor the sacrifices made for it.</p>
+                <p>Happy Independence Day,<h6 id="name"></h6></p>
+                <button class="btn btn-success" onclick="hideCard()" id="button">Close</button>
+            </div>
+        </div>
+        <div>
+            <a href="independenceday13.html" target="_blank"><button class="btn btn-warning btn-lg" style="margin-left: 100px; margin-top: 100px;">Next</button></a>
+        </div>
+        <audio id="anthem" src="Jana Gana Mana (Original)-(Mr-Jat.in).mp3"></audio>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+</body>
+</html>
